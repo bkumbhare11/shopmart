@@ -19,7 +19,9 @@ function Login() {
     }
   }, [isLoggedIn]);
 
-  function handleClick() {
+  function handleLogin(e) {
+    e.preventDefault();
+
     const isInvalid = email.trim() === "" || password.trim() === "";
     if (isInvalid) {
       toast.error("Email and Password are required!");
@@ -42,7 +44,10 @@ function Login() {
 
   return (
     <section className="">
-      <div className="w-full max-w-lg mx-auto p-6 border-2 border-slate-900 rounded-2xl mt-30 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] bg-white">
+      <form
+        onSubmit={(e) => handleLogin(e)}
+        className="w-full max-w-lg mx-auto p-6 border-2 border-slate-900 rounded-2xl mt-30 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] bg-white"
+      >
         <div className="mb-8 space-y-1.5">
           <h1 className="font-black text-4xl tracking-tighter text-center uppercase italic">
             ShopMart
@@ -65,6 +70,7 @@ function Login() {
             <input
               type="email"
               id="email"
+              value={email}
               placeholder="name@example.com"
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-900 rounded-lg placeholder:text-slate-400 focus:outline-none focus:ring-2 ring-slate-500 transition-all"
@@ -81,6 +87,7 @@ function Login() {
             <input
               type="password"
               id="password"
+              value={password}
               placeholder="••••••••"
               minLength={6}
               onChange={(e) => setPassword(e.target.value)}
@@ -89,8 +96,8 @@ function Login() {
           </div>
 
           <button
+            type="submit"
             className="w-full bg-slate-900 text-white py-3.5 font-bold rounded-lg mt-6 uppercase cursor-pointer"
-            onClick={handleClick}
           >
             Login
           </button>
@@ -99,7 +106,7 @@ function Login() {
             Portfolio Project • No real signup required
           </p>
         </div>
-      </div>
+      </form>
     </section>
   );
 }
