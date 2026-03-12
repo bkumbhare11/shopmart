@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { ENDPOINTS } from "@/constants/api";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import RatingsCalculator from "@/constants/ratingsCalculator";
+import RatingsCalculator from "@/constants/RatingsCalculator";
 import { priceCalculator } from "@/constants/priceCalculator";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
