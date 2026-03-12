@@ -14,7 +14,6 @@ createRoot(document.getElementById("root")).render(
       reverseOrder={false}
       toastOptions={{
         style: {
-          borderRadius: "0px",
           background: "#0f172a",
           color: "#fff",
           border: "3px solid #000",
