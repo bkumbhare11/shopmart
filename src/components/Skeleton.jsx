@@ -5,17 +5,20 @@ export const CardSkeleton = () => (
     {[...Array(10)].map((_, index) => (
       <div
         key={index}
-        className="flex flex-col bg-white border border-slate-100 shrink-0 w-72 h-72 animate-pulse rounded-2xl p-4 shadow-sm"
+        className="flex flex-col bg-white border border-slate-100 shrink-0 w-full max-w-sm mx-auto mt-5 animate-pulse rounded-2xl p-4 shadow-sm"
       >
-        <div className="bg-slate-200 w-full h-36 rounded-xl mb-4"></div>
-
         <div className="flex flex-col gap-3">
-          <div className="bg-slate-200 w-1/4 h-3 rounded-full"></div>
-          <div className="space-y-2">
+          <div className="bg-slate-200 w-full h-36 rounded-xl mb-4"></div>
+          <div className="space-y-3">
             <div className="bg-slate-200 w-full h-4 rounded-full"></div>
+            <div className="bg-slate-200 w-2/3 h-4 rounded-full"></div>
+            <div className="bg-slate-200 w-2/3 h-4 rounded-full"></div>
+            <div className="bg-slate-200 w-2/3 h-4 rounded-full"></div>
+            <div className="bg-slate-200 w-2/3 h-4 rounded-full"></div>
             <div className="bg-slate-200 w-2/3 h-4 rounded-full"></div>
           </div>
           <div className="bg-slate-200 w-20 h-6 rounded-lg"></div>{" "}
+          <div className="bg-slate-200 w-full h-10 rounded-lg"></div>{" "}
         </div>
       </div>
     ))}

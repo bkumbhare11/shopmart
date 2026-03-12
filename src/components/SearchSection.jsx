@@ -157,7 +157,7 @@ function SearchSection() {
         )}
       </div>
 
-      {categoriesList && (
+      {categoriesList && categoriesList.length > 0 && (
         <div className="flex gap-4 overflow-x-auto whitespace-nowrap py-2 px-2 no-scrollbar text-slate-900">
           <button
             className={`shrink-0 px-4 py-1.5 rounded-full  font-semibold text-sm cursor-pointer ${!activeCategory ? "bg-slate-900 text-slate-100" : "bg-slate-100 text-slate-600"}`}

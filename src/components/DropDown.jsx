@@ -14,8 +14,9 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logOut } from "@/features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-import { clearWishlist } from "@/features/wishlist/wishlistSlice";
+import { clearCart } from "@/features/cart/cartSlice";
 import toast from "react-hot-toast";
+import { clearWishlist } from "@/features/wishlist/wishlistSlice";
 
 function DropDown() {
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ function DropDown() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   function handleLogout() {
+    dispatch(clearCart());
     dispatch(clearWishlist());
+    localStorage.removeItem("address");
     dispatch(logOut());
     toast.success("Logged out successfully. See you soon!");
   }
