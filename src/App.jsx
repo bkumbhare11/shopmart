@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import DataLoader from "./components/DataLoader";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
-import Cart from "./pages/cart";
+import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
 import ProductDetail from "./pages/ProductDetail";
 import Error from "./pages/Error";
