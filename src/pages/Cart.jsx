@@ -21,7 +21,7 @@ function Cart() {
   const dispatch = useDispatch();
 
   return (
-    <section className="pb-65 sm:pb-70">
+    <section className="pb-70">
       <div className="flex flex-col gap-1.5 mb-2 py-3 ">
         <CommonHeader title="My Cart" count={cartItems.length} />
 

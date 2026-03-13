@@ -20,18 +20,18 @@ function Navbar() {
 
   return (
     <>
-      <header className="flex flex-col gap-2 border-b border-slate-200 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <header className="flex flex-col gap-2 border-b-2 border-slate-900 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="flex justify-between w-full max-w-[90%] mx-auto py-4">
           <Link
             to="/"
-            className="text-2xl font-bold tracking-tighter text-slate-900 sm:hidden"
+            className="text-2xl font-black tracking-tighter text-slate-900 sm:hidden"
           >
             SM
           </Link>
 
           <Link
             to="/"
-            className="text-3xl font-bold tracking-tighter text-slate-900 hidden sm:block"
+            className="text-3xl font-black uppercase tracking-tighter text-slate-900 hidden sm:block"
           >
             ShopMart
           </Link>

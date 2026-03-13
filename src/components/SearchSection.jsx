@@ -124,9 +124,8 @@ function SearchSection() {
               ))
             ) : (
               <div className="p-6 flex flex-col gap-2 items-center justify-center text-center">
-                <div className="bg-slate-100 p-2 mb-2 rounded-full">
+                <div className="bg-slate-100 p-2 mb-2 rounded-full text-slate-900">
                   <SearchOutlinedIcon
-                    className="text-slate-500"
                     sx={{
                       fontSize: {
                         xs: "1.8rem",

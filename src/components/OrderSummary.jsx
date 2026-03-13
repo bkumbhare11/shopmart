@@ -52,7 +52,7 @@ function OrderSummary({ btnText }) {
       </div>
 
       <button
-        className="bg-slate-900 text-white w-full mt-5 py-3 sm:py-4 sm:text-xl font-bold rounded-md active:scale-95"
+        className="bg-slate-900 text-white w-full mt-5 py-3 sm:py-4 sm:text-xl font-bold rounded-md active:scale-95 cursor-pointer"
         onClick={checkout}
       >
         {btnText}
