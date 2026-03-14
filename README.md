@@ -95,8 +95,8 @@ Follow these steps to run the project locally on your machine:
 
 I'm currently looking for new opportunities and would love to connect. If you have any feedback or just want to say hi, feel free to reach out!
 
-- **LinkedIn**: [www.linkedin.com/in/bhavesh-kumbhare-552a4a2b0](www.linkedin.com/in/bhavesh-kumbhare-552a4a2b0)
-- **Portfolio**: [YOUR_PORTFOLIO_LINK_IF_ANY]
+- **LinkedIn**: www.linkedin.com/in/bhavesh-kumbhare-552a4a2b0
+- **Portfolio**: https://my-portfolio-liart-omega-46.vercel.app/
 - **Email**: bhaveshkumbhare18@gmail.com
 
 ---
