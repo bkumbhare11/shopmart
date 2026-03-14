@@ -7,7 +7,7 @@ function CommonHeader({ title, count }) {
   return (
     <>
       <div className="flex justify-between items-center">
-        <div className="bg-slate-50 px-3 py-1.5 border border-slate-900 text-slate-800 font-medium rounded-lg flex items-center justify-center text-xs active:scale-95 transition-all duration-300 ">
+        <div className="bg-white px-3 py-1.5 border border-slate-900 text-slate-800 font-medium rounded-lg flex items-center justify-center text-xs active:scale-95 transition-all duration-300 cursor-pointer hover:bg-slate-900 hover:text-white ">
           <button onClick={() => navigate(-1)} className="cursor-pointer">
             <KeyboardBackspaceIcon
               sx={{

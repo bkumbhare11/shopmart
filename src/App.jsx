@@ -17,12 +17,12 @@ import { useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
   let isCartPage = location.pathname === "/cart";
-  console.log(isCartPage);
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen  bg-slate-100">
       <DataLoader />
       <Navbar />
-      <main className="w-[95%] sm:w-full sm:max-w-[85%] px-4 mx-auto my-4 flex-1">
+      <main className="w-[95%] sm:w-full sm:max-w-[85%] px-4 mx-auto py-4 flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

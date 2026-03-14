@@ -59,7 +59,7 @@ function DropDown() {
       <DropdownMenuContent align="end">
         {!isLoggedIn && (
           <DropdownMenuItem
-            className="font-semibold"
+            className="font-semibold cursor-pointer"
             onClick={() => navigate("/login")}
           >
             <PersonIcon className="text-slate-700" />
@@ -69,12 +69,12 @@ function DropDown() {
 
         {isLoggedIn && (
           <>
-            <DropdownMenuItem className="font-semibold">
+            <DropdownMenuItem className="font-semibold cursor-pointer">
               <AccountCircleIcon className="text-slate-700" />
               Hello, {user.name.slice(0, 1).toUpperCase() + user.name.slice(1)}
             </DropdownMenuItem>
             <DropdownMenuItem
-              className="font-semibold"
+              className="font-semibold cursor-pointer"
               onClick={() => navigate("/orders")}
             >
               <LocalMallIcon className="text-slate-700" />
@@ -83,7 +83,7 @@ function DropDown() {
             <DropdownMenuSeparator />
             <DropdownMenuItem variant="destructive" onClick={handleLogout}>
               <LogoutIcon />
-              <span className="font-bold">Log Out</span>
+              <span className="font-bold cursor-pointer">Log Out</span>
             </DropdownMenuItem>
           </>
         )}

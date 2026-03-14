@@ -60,8 +60,8 @@ function ProductDetail() {
   }
 
   return (
-    <section className="">
-      <div className="bg-slate-50 w-fit px-3 py-1.5 border border-slate-900 text-slate-800 font-medium rounded-lg flex items-center justify-center text-xs active:scale-95 transition-all duration-300 ">
+    <section className="overflow-hidden pb-6 ">
+      <div className="bg-slate-50 w-fit px-3 py-1.5 border border-slate-900 text-slate-800 font-medium rounded-lg flex items-center justify-center text-xs active:scale-95 transition-all duration-300 cursor-pointer hover:bg-slate-900 hover:text-white ">
         <button onClick={() => navigate(-1)} className="cursor-pointer">
           <KeyboardBackspaceIcon
             sx={{
@@ -251,7 +251,7 @@ function ProductDetail() {
                     return (
                       <div
                         key={index}
-                        className="bg-slate-50 rounded-xl p-3 flex flex-col justify-between h-32 w-70 shrink-0"
+                        className="bg-slate-50 rounded-xl p-3 flex flex-col justify-between h-32 w-72 shrink-0"
                       >
                         <div className="space-y-2">
                           <div className="flex items-center gap-1 bg-white w-fit px-1.5 py-1 rounded">

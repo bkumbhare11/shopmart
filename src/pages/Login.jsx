@@ -43,10 +43,10 @@ function Login() {
   }
 
   return (
-    <section className="">
+    <section>
       <form
         onSubmit={(e) => handleLogin(e)}
-        className="w-full max-w-lg mx-auto p-6 border-2 border-slate-900 rounded-2xl mt-30 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] bg-white"
+        className="w-full max-w-lg mx-auto p-6 border-2 border-slate-900 rounded-2xl mt-20 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] bg-white"
       >
         <div className="mb-8 space-y-1.5">
           <h1 className="font-black text-4xl tracking-tighter text-center uppercase italic">

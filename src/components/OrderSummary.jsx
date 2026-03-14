@@ -22,7 +22,7 @@ function OrderSummary({ btnText }) {
   }
 
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full sm:max-w-[85%] px-4 sm:px-10 py-4 rounded-tl-xl rounded-tr-xl bg-slate-50 space-y-1.5">
+    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full sm:max-w-[85%] px-4 sm:px-10 py-4 rounded-tl-xl rounded-tr-xl bg-white space-y-1.5">
       <h2 className="text-slate-900 text-xl sm:text-2xl mb-3 font-black">
         Order Summary
       </h2>

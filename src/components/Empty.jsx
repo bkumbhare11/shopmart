@@ -5,7 +5,7 @@ function Empty({ title, subTitle, icon, btnText }) {
   const navigate = useNavigate();
 
   return (
-    <section className="px-4">
+    <section>
       <div className="h-[70vh] flex flex-col items-center justify-center text-center">
         <div className="mb-4 text-slate-700">{icon}</div>
 

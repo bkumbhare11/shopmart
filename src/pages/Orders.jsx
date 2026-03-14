@@ -20,7 +20,7 @@ function Orders() {
   }, [isLoggedIn]);
 
   return (
-    <section className="">
+    <section>
       <div className="mt-5">
         <CommonHeader title="My Orders" count={orders.length} />
       </div>

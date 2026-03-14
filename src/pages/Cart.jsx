@@ -21,14 +21,14 @@ function Cart() {
   const dispatch = useDispatch();
 
   return (
-    <section className="pb-70">
+    <section className="pb-80">
       <div className="flex flex-col gap-1.5 mb-2 py-3 ">
         <CommonHeader title="My Cart" count={cartItems.length} />
 
         {cartItems.length > 0 && (
           <div className="flex justify-end ">
             <button
-              className="bg-slate-50 px-3 py-2 uppercase text-[10px] sm:text-[12px] font-bold text-slate-800 border border-slate-900 rounded-md active:scale-95 transition-all duration-300 cursor-pointer hover:bg-slate-900 hover:text-white "
+              className="bg-white px-3 py-2 uppercase text-[10px] sm:text-[12px] font-bold text-slate-800 border border-slate-900 rounded-md active:scale-95 transition-all duration-300 cursor-pointer hover:bg-slate-900 hover:text-white"
               onClick={() => dispatch(clearCart())}
             >
               Clear Cart

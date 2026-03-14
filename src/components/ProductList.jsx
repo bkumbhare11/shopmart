@@ -20,10 +20,6 @@ function ProductList() {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
 
-  console.log(
-    products.map((product) => (product.stock === 0 ? product.title : "")),
-  );
-
   function addProduct(product) {
     dispatch(addToCart(product));
   }

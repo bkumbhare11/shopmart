@@ -84,9 +84,16 @@ function SearchSection() {
   return (
     <section className="flex flex-col gap-2 ">
       <div className="relative bottom-0">
-        <div className="flex gap-2 border p-2.5 sm:p-4 rounded-xl border-slate-200 bg-slate-50 focus-within:border-slate-900 ">
-          <label htmlFor="search" className="text-slate-400">
-            <SearchOutlinedIcon className="text-xl!" />
+        <div className="flex items-center gap-2 border p-2.5 sm:p-4 rounded-xl border-slate-200 bg-white focus-within:border-slate-900 ">
+          <label htmlFor="search" className="text-slate-900">
+            <SearchOutlinedIcon
+              sx={{
+                fontSize: {
+                  xs: "1.3rem",
+                  sm: "1.7rem",
+                },
+              }}
+            />
           </label>
           <input
             type="text"
@@ -99,7 +106,7 @@ function SearchSection() {
         </div>
 
         {searchVal !== "" && (
-          <div className="absolute bg-slate-50 w-full z-50 rounded-bl-xl rounded-br-xl p-4">
+          <div className="absolute bg-white w-full z-50 rounded-bl-xl rounded-br-xl p-4">
             {searchVal !== debounceQuery ? (
               <div className="text-slate-500 font-bold text-xs text-center p-4 sm:text-lg">
                 Loading...
@@ -145,7 +152,7 @@ function SearchSection() {
                 </p>
 
                 <button
-                  className="text-blue-500 font-bold text-xs hover:underline mt-1.5 sm:text-lg"
+                  className="text-blue-500 font-bold text-xs hover:underline mt-1.5 cursor-pointer sm:text-lg"
                   onClick={() => setSearchVal("")}
                 >
                   Clear Search
@@ -159,7 +166,7 @@ function SearchSection() {
       {categoriesList && categoriesList.length > 0 && (
         <div className="flex gap-4 overflow-x-auto whitespace-nowrap py-2 px-2 no-scrollbar text-slate-900">
           <button
-            className={`shrink-0 px-4 py-1.5 rounded-full  font-semibold text-sm cursor-pointer ${!activeCategory ? "bg-slate-900 text-slate-100" : "bg-slate-100 text-slate-600"}`}
+            className={`shrink-0 px-4 py-1.5 rounded-full  font-semibold text-sm cursor-pointer ${!activeCategory ? "bg-slate-900 text-slate-100" : "bg-white text-slate-600"}`}
             onClick={() => handleCategory("")}
           >
             All
@@ -168,7 +175,7 @@ function SearchSection() {
           {categoriesList.map((category) => (
             <button
               key={category.name}
-              className={`shrink-0 px-4 py-1.5 cursor-pointer rounded-full font-semibold text-sm sm:text-[16px]  ${activeCategory === category.slug ? "bg-slate-900 text-slate-100" : "bg-slate-100 text-slate-600"}`}
+              className={`shrink-0 px-4 py-1.5 cursor-pointer rounded-full font-semibold text-sm sm:text-[16px]  ${activeCategory === category.slug ? "bg-slate-900 text-slate-100" : "bg-white text-slate-600"}`}
               onClick={() => handleCategory(category.slug)}
             >
               {category.name}
@@ -177,10 +184,10 @@ function SearchSection() {
         </div>
       )}
 
-      <div className="flex items-center justify-between border-t border-slate-100 pt-3">
+      <div className="flex items-center justify-between border-t-2 border-slate-500 pt-3">
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger
-            className={`"border px-3 py-2 font-semibold cursor-pointer rounded-full border-slate-200 transition-all duration-300 ease-in-out text-xs sm:text-sm flex gap-1 items-end" ${currentsort.value !== "" ? "bg-black text-white" : "text-slate-900 bg-slate-100"}`}
+            className={`"border px-3 py-2 font-semibold cursor-pointer rounded-full border-slate-200 transition-all duration-300 ease-in-out text-xs sm:text-sm flex gap-1 items-end" ${currentsort.value !== "" ? "bg-black text-white" : "text-slate-900 bg-white"}`}
           >
             <SwapVertIcon
               sx={{
@@ -209,7 +216,7 @@ function SearchSection() {
                   <button
                     key={item.label}
                     onClick={() => handleSort(item.value)}
-                    className={` text-sm transition-all ${
+                    className={` text-sm transition-all cursor-pointer ${
                       isActive ? "text-slate-900 font-bold" : " text-gray-700"
                     }`}
                   >
@@ -219,7 +226,7 @@ function SearchSection() {
               })}
 
               <button
-                className="font-semibold text-sm text-red-500"
+                className="font-semibold text-sm cursor-pointer text-red-500"
                 onClick={clearFilters}
               >
                 Clear Filters
@@ -228,7 +235,7 @@ function SearchSection() {
           </SheetContent>
         </Sheet>
 
-        <span className="text-xs sm:text-sm text-slate-400 font-medium">
+        <span className="text-xs sm:text-sm text-slate-500 font-medium">
           {products.length} Products
         </span>
       </div>

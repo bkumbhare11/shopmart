@@ -19,7 +19,7 @@ function Wishlist() {
   }
 
   return (
-    <section className="">
+    <section>
       <div className="py-3 mb-4">
         <CommonHeader title="My Wishlisht" count={wishlistItems.length} />
       </div>
